@@ -2,7 +2,7 @@
     "name": "backed-jetton",
     "license": "MIT",
     "scripts": {
-        "test": "jest --verbose --runInBand --coverage"
+        "test": "jest"
     },
     "devDependencies": {
         "@ton-community/blueprint": "^0.4.1",
