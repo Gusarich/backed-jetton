@@ -48,7 +48,7 @@ export class BackedJetton implements Contract {
         await provider.internal(via, {
             value,
             sendMode: SendMode.PAY_GAS_SEPARATELY,
-            body: beginCell().storeUint(0x3828dc96, 32).storeUint(12345, 64).storeCoins(minTokens).endCell(),
+            body: beginCell().storeUint(0x3828dc96, 32).storeUint(0, 64).storeCoins(minTokens).endCell(),
         });
     }
 

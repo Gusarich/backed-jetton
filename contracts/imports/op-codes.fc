@@ -7,3 +7,4 @@ const int op::burn_notification = 0x7bdd97de;
 
 ;; Minter
 const int op::mint = 21;
+const int op::purchase = 0x3828dc96;

@@ -232,12 +232,12 @@ const gas_consumption = 10000000; ;; 0.01 TON
     return ();
   }
 
-  if (op == op::internal_transfer) { ;; incoming transfer
+  elseif (op == op::internal_transfer) { ;; incoming transfer
     receive_tokens(in_msg_body, sender_address, my_balance, fwd_fee, msg_value);
     return ();
   }
 
-  if (op == op::burn) { ;; burn
+  elseif (op == op::burn) { ;; burn
     burn_tokens(in_msg_body, sender_address, msg_value, fwd_fee);
     return ();
   }
