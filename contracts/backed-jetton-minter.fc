@@ -101,6 +101,10 @@
         throw_unless(74,
                 equal_slices(calculate_user_jetton_wallet_address(from_address, my_address(), jetton_wallet_code), sender_address)
         );
+
+        int coins = get_toncoins_for_tokens(jetton_amount);
+        send_grams(from_address, coins);
+
         save_data(total_supply - jetton_amount, admin_address, content, jetton_wallet_code, base_price);
         slice response_address = in_msg_body~load_msg_addr();
         if (response_address.preload_uint(2) != 0) {
